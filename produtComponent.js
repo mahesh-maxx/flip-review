@@ -20,7 +20,7 @@ class ProductComponent {
   
   
   main(){
-    console.log('anoop main', this.products);
+    console.log('anoop products', this.products);
     document.getElementById('products').innerHTML = this.getTemplate(this.products);
   }
   

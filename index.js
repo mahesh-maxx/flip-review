@@ -11,7 +11,8 @@
   fetch('http://flipkart9jun.mockable.io/reviews/1')
   .then((resp) => resp.json()) 
   .then((reviews)=>{
-    console.log('anp reviews', reviews);
+    let review  = new ReviewComponent(reviews);
+    review.main();
   })
 
 })();

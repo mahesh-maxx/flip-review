@@ -1,0 +1,16 @@
+.main{
+  display: flex;   
+  flex-wrap: wrap;
+  flex:100%;
+}
+.products{
+  display: flex;
+  flex-wrap: wrap;   
+  flex:30%;
+}
+.reviews{
+  display: flex;   
+  flex-wrap: wrap;
+  flex:50%;
+
+}
