@@ -16,15 +16,33 @@
   })
   
   let onStarClick = (e)=>{
-    console.log('anp here', e);
-    console.log('anp here', e.srcElement.classList);
     let stars = e &&  e.srcElement &&  e.srcElement.classList ? e.srcElement.classList :[];
     let star = parseInt(stars[2]);
-    console.log('anp star', star);
     let rForm  = new ReviewFormComponent(star);
     rForm.main();
   }
   
+  let onReviewSubmitClick = (e)=>{
+    if(window.localStorage){
+      //set
+      let data = {};
+     localStorage.setItem('review', JSON.stringify(data));
+    }
+    
+    
+    if(window.localStorage){
+      //get
+      let data = localStorage.getItem('reviews');
+      if(data){
+        let data = JSON.parse(data);
+        let result = data[0] ? data.result:undefined;
+        
+      }
+    }
+    
+  }
+  
   document.getElementById('stars').addEventListener('click', onStarClick);
+  document.getElementById('reviewSubmit').addEventListener('click', onReviewSubmitClick);
 
 })();
