@@ -6,7 +6,7 @@ class ProductComponent {
   getTemplate(products = []){
     let template = '';
     for(let p of products){
-      let temp = `<div id="product">
+      let temp = `<div name="${p.id}">
                     <img src="${p.productImage}" alt="">
                     <h3>${p.title}</h3>
                     <h4>${p.rating.average} ${p.rating.ratingCount} ratings & ${p.rating.reviewCount} reviews</h4>
