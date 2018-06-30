@@ -14,5 +14,17 @@
     let review  = new ReviewComponent(reviews);
     review.main();
   })
+  
+  let onStarClick = (e)=>{
+    console.log('anp here', e);
+    console.log('anp here', e.srcElement.classList);
+    let stars = e &&  e.srcElement &&  e.srcElement.classList ? e.srcElement.classList :[];
+    let star = parseInt(stars[2]);
+    console.log('anp star', star);
+    let rForm  = new ReviewFormComponent(star);
+    rForm.main();
+  }
+  
+  document.getElementById('stars').addEventListener('click', onStarClick);
 
 })();
